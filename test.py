@@ -1,7 +1,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-# Load Model + Tokenizer
+
 model_name = "./sentiment_model"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
@@ -19,3 +19,4 @@ for text in texts:
     pred = torch.argmax(outputs.logits, dim=1).item()
     sentiment = "Positive" if pred == 1 else "Negative"
     print(f"Text: {text}\nPredicted Sentiment: {sentiment}\n")
+
