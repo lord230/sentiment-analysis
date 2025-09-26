@@ -46,7 +46,7 @@ model = AutoModelForSequenceClassification.from_pretrained(model_name, num_label
 
 training_args = TrainingArguments(
     output_dir="./results",
-    eval_strategy="epoch",   # ✅ fixed
+    eval_strategy="epoch",   
     per_device_train_batch_size=32,
     per_device_eval_batch_size=16,
     num_train_epochs=6,
@@ -67,3 +67,4 @@ trainer = Trainer(
 trainer.train()
 model.save_pretrained("./sentiment_model")
 tokenizer.save_pretrained("./sentiment_model")
+
