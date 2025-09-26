@@ -6,4 +6,10 @@ On the code of final.py the monkey patching was done so it helps the code to for
 
 To Run this code 
 
-Just need the pretrained model which is needed to be uploaded 
+Just need the pretrained model which is upload on Hugging Face with tokens and models 
+git clone https://huggingface.co/Lord230/sentiment-model-bert
+
+this is the link clone it and run
+server.py 
+and before that write this
+pip install -r req.py which is important that will install all the modules required to run this then I used ngrok to host it so to run it without hassel u need to call me u have my number 
