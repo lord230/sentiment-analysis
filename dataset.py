@@ -1,0 +1,20 @@
+import pandas as pd
+
+df = pd.read_csv("mini.csv")
+print(df.head)
+df = df.dropna()
+print(df.head())
+sentiment_counts = df['Sentiment'].value_counts()
+print("\nSentiment counts:")
+print(sentiment_counts)
+print(f"\nTotal unique sentiment in Mini types: {df['Sentiment'].nunique()}")
+
+df = pd.read_csv("train.csv")
+print(df.head)
+df = df.dropna()
+print(df.head())
+sentiment_counts = df['Sentiment'].value_counts()
+print("\nSentiment counts:")
+print(sentiment_counts)
+print(f"\nTotal unique sentiment In Train types: {df['Sentiment'].nunique()}")
+print(len(df['Sentiment']))
